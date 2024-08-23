@@ -26,8 +26,10 @@ public class DeliveryActions : MonoBehaviour
 
     private void Collect(IPackage newPackage)
     {
+        // Se não está já carregando um pacote e o novo pacote é válido.
         if (!PendingDelivery && newPackage != null)
         {
+            // Armazena o pacote e muda a cor do carro e dispara o evento de Pacote Coletado.
             CurrentPackage = newPackage;
             Debug.Log("package collected!");
             SetColor(CurrentPackage.PackageColor);
@@ -37,8 +39,10 @@ public class DeliveryActions : MonoBehaviour
 
     private void Deliver(ICustomer customer)
     {
+        // Se está carregando o pacote e o cliente é válido
         if (PendingDelivery && customer != null)
         {
+            // Remove a alteração da cor, dispara o evento de Pacote Entregue e marca como não carregando um pacote.
             Debug.Log("package delivered!");
             ResetColor();
             PackageDelivered?.Invoke(CurrentPackage, customer);

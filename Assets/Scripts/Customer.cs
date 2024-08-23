@@ -11,11 +11,9 @@ public class Customer : MonoBehaviour, ICustomer
     {
         set
         {
+            // Chamada para atribuir dinâmicamente a Sprite do cliente
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-            if (renderer != null)
-            {
-                renderer.sprite = value;
-            }
+            if (renderer != null) { renderer.sprite = value; }
         }
     }
 }

@@ -6,12 +6,13 @@ public class ScoreUI : MonoBehaviour
     public GameObject Target;
     private TextMeshProUGUI tmpScore;
 
-    // Start is called before the first frame update
     void Start()
     {
         tmpScore = GetComponent<TextMeshProUGUI>();
     }
 
+    // Metodo que trata o evento Pontuação Alterada
+    // Atualiza na tela a pontuação atual.
     public void ScoreChanged(int score)
     {
         tmpScore.text = $"Score: {score}";

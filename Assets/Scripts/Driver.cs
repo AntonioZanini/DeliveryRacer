@@ -62,21 +62,29 @@ public class Driver : MonoBehaviour
         return -Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
     }
 
+    // Diminui a velocidade do carro por 32 ao bater em algum obstáculo.
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // CancelInvoke: remove quaisquer execuções da função methodName que tenham sido agendadas por algum método Invoke.
         CancelInvoke(nameof(ResetSpeed));
         SpeedRate = SpeedRate.Slow;
         Debug.Log("Bump!");
+        // Invoke: executa a função passada como parâmetro methodName após o intervalo em segundos informado no parâmetro time.
         Invoke(nameof(ResetSpeed), 3);
     }
 
+    // Aumenta a velocidade do carro por 5s ao atravessar um ponto de speed boost.
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Tags: podem ser informadas nos GameObjects para servir como um identificador.
+        // CompareTags: indica se a Tag em questão está associada ao objeto.
         if (collision.CompareTag(Tags.Boost))
         {
+            // CancelInvoke: remove quaisquer execuções da função methodName que tenham sido agendadas por algum método Invoke.
             CancelInvoke(nameof(ResetSpeed));
             SpeedRate = SpeedRate.Fast;
             Debug.Log("Boost!");
+            // Invoke: executa a função passada como parâmetro methodName após o intervalo em segundos informado no parâmetro time.
             Invoke(nameof(ResetSpeed), 5);
         }
     }

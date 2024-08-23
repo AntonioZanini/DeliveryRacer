@@ -21,27 +21,27 @@ Desenvolver o **Delivery Racer** proporcionou uma rica experiência de aprendiza
 
 ### Características Técnicas
 
-### 1. **Estruturação de Scripts e Modularidade**
+#### 1. **Estruturação de Scripts e Modularidade**
    - Aprendi a importância de estruturar os scripts de maneira modular. Cada classe, como `Customer`, `Package`, e `Driver`, tem responsabilidades bem definidas, facilitando a manutenção e expansão do código.
    - **Exemplo**: O script `DeliveryActions` gerencia as ações de coleta e entrega de pacotes, mantendo o código organizado e separado das outras funcionalidades do jogo.
 
-### 2. **Gestão de Eventos e Interações no Unity**
+#### 2. **Gestão de Eventos e Interações no Unity**
    - Utilizamos `UnityEvent` para gerenciar interações entre objetos, como a coleta e entrega de pacotes. Isso nos ajudou a entender como os eventos podem ser usados para criar um fluxo de jogo dinâmico e reativo.
    - **Exemplo**: Os eventos `PackageCollected` e `PackageDelivered` são usados para disparar mudanças no estado do jogo, como a alteração da cor do carro ou a atualização do score.
 
-### 3. **Manutenção e Manipulação de Estados**
+#### 3. **Manutenção e Manipulação de Estados**
    - Implementamos sistemas para gerenciar o estado do jogador e dos pacotes, o que incluiu o controle da velocidade de movimento com base em diferentes condições (colisões, power-ups) e o rastreamento do status de entrega. Aprendemos a importância de manter o código limpo e modular para facilitar ajustes e manutenção.
    - **Exemplo**: No script `Driver`, a velocidade do carro é ajustada com base em colisões e power-ups, aumentando a complexidade e desafio do jogo.
 
-### 4. **Uso de Sprites e Animações**
+#### 4. **Uso de Sprites e Animações**
    - A atribuição dinâmica de sprites a objetos como pacotes e clientes nos ensinou a manipular gráficos 2D no Unity, além de reforçar a importância de recursos visuais na comunicação de informações ao jogador.
    - **Exemplo**: O método `SetColor` no script `DeliveryActions` muda a cor do carro para refletir que ele está carregando um pacote, oferecendo um feedback visual claro para o jogador.
 
-### 5. **Controle de Colisões e Triggers**
+#### 5. **Controle de Colisões e Triggers**
    - Implementamos mecanismos de colisão e triggers para detectar quando o jogador coleta um pacote ou atinge um ponto de boost de velocidade. Isso nos ajudou a compreender melhor o sistema de física 2D do Unity.
    - **Exemplo**: Colisões são detectadas para ajustes na velocidade, e triggers são usados para ativar power-ups ou ações específicas, como a coleta de pacotes.
 
-### 6. **Gerenciamento de Recursos e Prefabs**
+#### 6. **Gerenciamento de Recursos e Prefabs**
    - A criação e uso de prefabs para pacotes e clientes foi fundamental para o desenvolvimento eficiente do jogo, permitindo a reutilização de objetos e facilitando a adição de novos elementos ao jogo.
    - **Exemplo**: O script `GameControl` é responsável por criar pacotes e clientes de forma aleatória nos pontos de spawn, garantindo uma jogabilidade variada e dinâmica.
 
